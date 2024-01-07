@@ -22,7 +22,6 @@ class _StopwatchScreenState extends ConsumerState<StopwatchScreen> {
         child: StreamBuilder<StopWatch?>(
             stream: ref.watch(stopwatchViewModelProvider).getStopwatch(),
             builder: (context, stopwatch) {
-              //if (!weights.hasData) return const LinearProgressIndicator();
               if (stopwatch.hasData) {
                 return Column(
                   children: [
@@ -32,7 +31,6 @@ class _StopwatchScreenState extends ConsumerState<StopwatchScreen> {
                     ),
                     Expanded(
                       child: ListView.builder(
-                        //reverse: true,
                         itemCount: stopwatch.data!.laps.length,
                         itemBuilder: (context, index) {
                           final lap = stopwatch.data!
