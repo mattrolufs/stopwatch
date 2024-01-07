@@ -50,11 +50,3 @@ The primary Timer logic is handled simply in the ViewModel.  Technically, one co
 ## Links to videos of the app in action in iPhone, Android, and Chrome web browser
 
 https://drive.google.com/drive/folders/1HtEfCjj8mn2EYxHMInHK_Uq79g-7aST1?usp=sharing
-
-
-
-
-
-## Link to video of the app in action
-
-https://drive.google.com/file/d/1LwRSmeqBbwee3DR8wiZ0ggxjU37U7thp/view?usp=sharing
