@@ -33,6 +33,8 @@ flutter run
 
 ## Some further details
 
+While the spec is sufficent, I levereaged some general design inspiration from the iPhone's built-in Stopwatch feature, but certainly not identical.  I made a much larger Start/Stop button, after my own frustrations with experiences with the iPhone stopwatch while running at the local track.
+
 I have attempted to follow Clean Architecture guidelines, which ultimately yields an app that is testable, maintainable, and scalable, and is a proven architecture for growth, as requested in the product spec.  Some of the folders are in the domain and data layers are placeholders only, as there was no requirement (yet) to implement significant data passthrough or storage.  I have some infrastructure for a SaveStopWatchUseCase, but it is not used at this time.
 
 I follow a basic MVVM Presentation layer and leverage the Riverpod package for the UI State Management.
