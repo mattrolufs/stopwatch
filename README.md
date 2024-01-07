@@ -18,15 +18,41 @@ You work for a company that makes stopwatches. Oftentimes, though, a given stopw
 The finished product should, at a minimum, build to iOS and Android devices (Simulator/Emulator is okay) and to web displaying a uniform interface and user experience. The finished product should include everything needed for other engineers to work on the product and for the deployment team to deploy the application (into the App or Play stores or to web). The finished product should provide confidence that the application will perform as expected.
 
 
-## Getting Started
+## Setup Instructions for running the app
 
-This project is a starting point for a Flutter application.
+Clone this Github repo to your local development environment.
+Open the project in your VS Code or Android Studio IDE.
+In Terminal, run the following command to retrieve all pubspec dependencies:
 
-A few resources to get you started if this is your first Flutter project:
+flutter pub get
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The app is configured to run in iOS, Android, a Web Browser.  
+In Terminal, run the following command and when prompted, select the number associated with the desired platform:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+flutter run
+
+## Some further details
+
+I have attempted to follow Clean Architecture guidelines, which ultimately yields an app that is testable, maintainable, and scalable, and is a proven architecture for growth, as requested in the product spec.  Some of the folders are in the domain and data layers are placeholders only, as there was no requirement (yet) to implement significant data passthrough or storage.  I have some infrastructure for a SaveStopWatchUseCase, but it is not used at this time.
+
+I follow a basic MVVM Presentation layer and leverage the Riverpod package for the UI State Management.
+
+I use a StreamBuilder to handle the continuous Stream of Timer updates which provide periodic snapshots of the underlying dart:core Stopwatch object.
+
+The viewmodel manages basic functional logic of the stopwatch, laps management, and some string formatting.
+
+I have a rudimentary Dependency Injection file created called Injector.dart which potentially takes any concrete initializers of any dependencies.
+
+## Some additional thoughts
+
+The primary Timer logic is handled simply in the ViewModel.  Technically, one could consider the Stopwatch data as residing in the Data/DataSource or Data/Repository layer of the architecture, and that could easily further demontrate the separation of the Stopwatch as a data source, with control and access from specific UseCases in the Domain layer.
+
+
+
+
+
+
+
+## Link to video of the app in action
+
+https://drive.google.com/file/d/1LwRSmeqBbwee3DR8wiZ0ggxjU37U7thp/view?usp=sharing
