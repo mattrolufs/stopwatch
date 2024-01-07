@@ -47,7 +47,9 @@ I have a rudimentary Dependency Injection file created called Injector.dart whic
 
 The primary Timer logic is handled simply in the ViewModel.  Technically, one could consider the Stopwatch data as residing in the Data/DataSource or Data/Repository layer of the architecture, and that could easily further demontrate the separation of the Stopwatch as a data source, with control and access from specific UseCases in the Domain layer.
 
+## Links to videos of the app in action in iPhone, Android, and Chrome web browser
 
+https://drive.google.com/drive/folders/1HtEfCjj8mn2EYxHMInHK_Uq79g-7aST1?usp=sharing
 
 
 
